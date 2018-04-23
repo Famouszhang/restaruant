@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prince Benson Waimai</title>
+</head>
+<body>
+<h1>Prince Benson Fusion Restaruant</h1>
+<p>Your convenience is our duty</p>
+
+<h2>here are all our items</h2>
+
+
+<!-- Item 1 -->
+<p>Ice cream: 8 rmb</p>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524457010102&di=f70399ed1594c624f26dd7654628736b&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F6d81800a19d8bc3e63b6e2ef888ba61ea8d3455d.jpg">
+
+
+<!-- Item 2 -->
+<p>Humberger: 15 rmb</p>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524457179912&di=a0ae86914cda0047cb3efbd5d1d7d8a1&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F11385343fbf2b2118265f873c18065380cd78e47.jpg">
+
+
+
+<!-- Item 3 -->
+<p>Juice: 10 rmb</p>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524457290515&di=4952b71c0bc6fbf6f4fc24fbf04453f3&imgtype=0&src=http%3A%2F%2Fimg003.hc360.cn%2Fk3%2FM0B%2F04%2FBA%2FwKhQv1efEYeEEHQpAAAAAE7I7h8638.jpg">
+
+
+<!-- Order Form -->
+<h2>Your order</h2>
+<form action="{% url 'waimai:home_page'%}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="item" placeholder="Which Item You Want"><br>
+    <textarea name="address" placeholder="Which Item You Want"></textarea><br>
+    <input type="submit" value="Your order">
+</form>
+
+<!-- Show Order -->
+<h1>Your Order:</h1>
+<p>Item Ordered:{{item}}</p>
+<p>Delivery Address:{{Address}}</p>
+
+
+
+</body>
+</html>
